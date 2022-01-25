@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8"/>
+        <title></title>
+	<style>
+		.test{float:left; width: 500px; height: 500px; padding:10px;margin:10px;}
+		@media only screen and (max-width: 500px)
+		{.test{width: 70%}}
+	</style>
+	<script type="text/javascript"></script>
+</head>
+<body>
+	<div>
+		<div class="test">
+		<div id="JP2K1" class="test"></div>
+		<div>JP2K-33003-2.svs</div>
+		</div>
+
+		<div class="test">
+		<div id="TowerBabel2" class="test"></div>
+		<div>The Tower of Babel.jpeg</div>
+		</div>
+
+		<div class="test">
+		<div id="SummerEvening3" class="test"></div>
+		<div>Summer Evening at Skagen beach.jpg</div>
+		</div>
+	</div>
+	<script src="./openseadragon-bin-3.0.0/openseadragon.min.js"></script>
+	<script type="text/javascript">
+	    var viewer1 = OpenSeadragon({
+		id: "JP2K1",//绑定ID
+		prefixUrl: "./openseadragon-bin-3.0.0/images/",//openseadragon自带的一些图标
+		tileSources: {
+		    Image: {
+			xmlns:  "http://schemas.microsoft.com/deepzoom/2009",
+			Url: "./JP2K/tiles_files/",//图片存放的路径
+			Overlap: "0",
+			TileSize: "256",
+			Format : "jpg",
+			Size:{
+			    Height: "47076",
+			    Width:  "32671"
+			}
+		    }
+		}
+	    });
+	    var viewer2 = OpenSeadragon({
+		id: "TowerBabel2",//绑定ID
+		prefixUrl: "./openseadragon-bin-3.0.0/images/",//openseadragon自带的一些图标
+		tileSources: {
+		    Image: {
+			xmlns:  "http://schemas.microsoft.com/deepzoom/2009",
+			Url: "./TowerBabel_256/tiles_files/",//图片存放的路径
+			Overlap: "0",
+			TileSize: "256",
+			Format : "jpg",
+			Size:{
+			    Height: "21952",
+			    Width:  "30000"
+			}
+		    }
+		}
+	    });
+	    var viewer3 = OpenSeadragon({
+		id: "SummerEvening3",//绑定ID
+		prefixUrl: "./openseadragon-bin-3.0.0/images/",//openseadragon自带的一些图标
+		tileSources: {
+		    Image: {
+			xmlns:  "http://schemas.microsoft.com/deepzoom/2009",
+			Url: "./SummerEvening/tiles_files/",//图片存放的路径
+			Overlap: "0",
+			TileSize: "256",
+			Format : "jpg",
+			Size:{
+			    Height: "11698",
+			    Width:  "16403"
+			}
+		    }
+		}
+	    });
+	</script>
+</body>
+</html>
+
+
