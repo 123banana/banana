@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8"/>
+        <title></title>
+<style type="text/css">
+
+</style>
+<script type="text/javascript"></script>
+</head>
+<body>
+	<div id="openseadragon1" style="width: 800px; height: 600px;"></div>
+	<script src="./openseadragon-bin-3.0.0/openseadragon.min.js"></script>
+	<script type="text/javascript">
+	    var viewer = OpenSeadragon({
+		id: "openseadragon1",//绑定ID
+		prefixUrl: "./openseadragon-bin-3.0.0/images/",//openseadragon自带的一些图标
+		tileSources: {
+		    Image: {
+			xmlns:  "http://schemas.microsoft.com/deepzoom/2009",
+			Url: "./pika_files/",//图片存放的路径
+			Overlap: "0",
+			TileSize: "256",
+			Format : "png",
+			Size:{
+			    Height: "908",
+			    Width:  "1172"
+			}
+		    }
+		}
+	    });
+	</script>
+</body>
+</html>
